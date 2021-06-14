@@ -1,0 +1,1129 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" rel="stylesheet" />
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" rel="stylesheet" />
+    <!-- MDB -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css" rel="stylesheet" />
+    <!-- MDB -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
+    <!-- Bootstrap CSS -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./home_style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap" rel="stylesheet">
+    <script type="text/javascript" src="./jquerrychat_bot.js"></script>
+
+    <title>UpSkill | UpSkill</title>
+</head>
+
+<body scroll="no">
+    <!-------------------------------------------------CHATBOT-------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+    <div class="chat_icon">
+
+        <img src="./images/CHAT.svg" width="80px">
+    </div>
+    <div class="chat_box">
+
+        <div class="header-buddy">
+            <table>
+                <tr>
+                    <td>
+                        <img src="./images/upskill.png" alt="" width="90px">
+                    </td>
+                    <td style="color:white">
+                        Buddy
+                    </td>
+                </tr>
+            </table>
+        </div>
+        <div class="outer-box" style="border:1px solid black;">
+
+            <div class="intro">Hi! I'm Buddy, the Unschool Chatbot! </div>
+            <div class="question1">Before I'm able to assist you today, what can I call you?</div>
+            <div id="answer1" class="fontt1"></div>
+            <div class="question2" id="quest2">
+                Can I have your phone number?
+            </div>
+            <div id="answer2" class="fontt1" style="display:none"></div>
+            <div id="quest3_comp">
+                <div class="question3">Great! Let's get right to it. How can I help you?</div>
+                <div style="background-color:white;">
+                    <div id="technology" onclick="choice_tech()">I want to learn more about Technology Courses.</div>
+                    <div id="arts" onclick="choice_arts()">I want to learn more about Arts and Humanities Courses.</div>
+                    <div id="management" onclick="choice_management()">I want to learn more about Management Courses.
+                    </div>
+                    <div id="aboutus" onclick="choice_aboutus()">I want to learn more about Upskill</div>
+                </div>
+            </div>
+            <div id="answer3" class="fontt1" style="display:none"></div>
+            <div id="last_quest">
+                <div class="question4"> Sure, you can check out our courses<a href="#"> here</a>!</div>
+                <div class="question4">In the meantime, let me connect you to one of our representatives. Someone will
+                    contact you within 24 hours.</div>
+
+            </div>
+        </div>
+
+
+
+        <div class="message-box">
+
+            <input id="text-field" style="padding: 0% 3%;" size="30" type="text" width="500px" height="140px"
+                placeholder="Enter your message here">
+            <img id="clickme" class="sent" src="./images/Airplane-512.png" width="34px" onclick="sendmessage()">
+
+        </div>
+
+    </div>
+    <!-----------------------------------------------CHATBOT----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+
+
+    <!-------------------------------------------------NAVBAR------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------>
+
+    <nav style="color:hsla(0,0%,100%,.8);" class="navbar navbar-expand-lg">
+        <img class="navbar-brand" src="./images/upskill.png" height="80px" width="190px">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown"
+            aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNavDropdown">
+            <ul class="navbar-nav ml-auto">
+
+                <li class="nav-item dropdown">
+
+                    <a style="color:hsla(0,0%,100%,.8); cursor:ponter" class="nav-link" href="#">Our courses</a>
+
+                </li>
+                <li class="nav-item">
+                    <a style="color:hsla(0,0%,100%,.8); cursor:pointer" class="nav-link"
+                        href="./BecomeaCoach.html">Become a coach</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color:hsla(0,0%,100%,.8); cursor:pointer" class="nav-link" href="#">About Us</a>
+                </li>
+                <li class="nav-item">
+                    <a style="color:hsla(0,0%,100%,.8); cursor:pointer" class="nav-link" href="#">Contact Us</a>
+                </li>
+            </ul>
+            <span class="navbar-text">
+                <button type="button" class="btn  btn-danger btn">Sign-in</button>
+            </span>
+        </div>
+    </nav>
+
+
+    <!----------------------------------------------NAVBAR----------------------------------------------------------------------------------------------------------------------------------------->
+
+
+
+
+    <!--------------------------------------READY TO UPSKILL SECTION---------------------------------------------------------------------------------------------------------------------------------------->
+    <section id="top">
+        <div class="container1">
+            <div class="img1">
+                <img src="./images/group-1160.webp " style="float:right;" height="500px" width="450px" alt="image">
+            </div>
+            <div class="content1">
+                Ready to <span class="upskill">UpSkill?</span>
+                <p style="font-family:'Open Sans', sans-serif; color:hsla(0,0%,100%,.75); letter-spacing: normal;">Use
+                    code : DEC30 and get flat
+                    30% off.</p>
+
+                <button type="button" class="btn1 btn-danger btn-lg">GET STARTED</button>
+            </div>
+            <div class="img2">
+                <img class="ist" src="./images/group-1159.webp" style="float:left;" height="500px" width="400px"
+                    alt="image">
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------READY TO UPSKILL SECTION--------------------------------------------------------------------------------------->
+
+
+
+
+
+
+    <!---------------------------------------AWARDS AND RECOGNITION SECTION------------------------------------------------->
+    <section id="middle1">
+        <div class="headandbody">
+            <div class="head1">
+                <h4>Awards & Recognitions</h4>
+                <div class="benefits-section-header-underline"></div>
+
+            </div>
+            <div class="body1">
+                <div>
+                    <img class="award" src="./images/govtnew.webp" alt="awards" height="60px">
+                </div>
+                <div>
+                    <img class="award" src="./images/frame-2.webp" alt="awards" height="60px">
+                </div>
+                <div>
+                    <img class="award" src="./images/apssdc-new.webp" alt="awards" height="60px">
+                </div>
+                <div>
+                    <img class="award" src="./images/hernew.webp" alt="awards" height="60px">
+                </div>
+                <div>
+                    <img class="award" src="./images/linkedinnew.webp" alt="awards" height="60px">
+                </div>
+                <div>
+                    <img class="award" src="./images/startup-indianew.webp" alt="awards" height="60px">
+                </div>
+                <div class="award">
+                    <img class="award" src="./images/thubnew.webp" alt="awards" height="60px">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!--------------------------------------------AWARDS AND RECOGNITION SECTION--------------------------------------------->
+
+
+
+
+    <!------------------------------------------START FROM SCRATCH CARDS----------------------------------->
+    <section id="middle2">
+
+        <div class="container2">
+            <div class="box1">
+                <div class="part1">
+                    <div>
+                        <div class="part11" style="bottom:0; position:absolute ;padding-bottom:4%;">
+                            <h5>Start <br>from Scratch</h5>
+                        </div>
+                        <div class="lines">Want to learn something absolutely new?<br>
+                            An open mind is the best place to build a palace! <br>Every course
+                            covers the basics of the subject.
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./images/download (3).svg" style="float:right;" height="196px" width="320px"
+                            alt="images">
+                    </div>
+                </div>
+                <div class="part2">
+                    <div>
+                        <div class="part21" style="padding-top:2%;">
+                            <h5>Certificate <br>On Completion</h5>
+                        </div>
+                        <div class="lines21">Recognized certificates to give<br> your resume an edge
+                            <br>A blue-chip credential<br> to enter your fielsd with.
+                        </div>
+                    </div>
+                    <div>
+                        <img src="./images/download (1).svg" style="float:right;" height="120px" width="280px"
+                            alt="images">
+                    </div>
+                </div>
+            </div>
+            <div class="box2">
+                <div class="part3">
+                    <div style="display:inline-block;">
+                        <img class="imgg" src="./images/third-card-2254c4dbda18b7cce576b67e15665671.svg"
+                            style="float:left;" height="150px" width="200px" alt="images">
+                    </div>
+                    <div style="display:inline-block;">
+                        <div class="part21" style="padding-top:2%; ">
+                            <h5>Mentorship <br>& Coaching</h5>
+                        </div>
+                        <div class="lines21">
+                            Industry Experts to guide you
+                            through your course and share
+                            their experience with you.
+                            Gain a friend in your field and a coach for life.
+                        </div>
+                    </div>
+                </div>
+
+
+
+                <div class="part4">
+                    <div>
+                        <div class="part21" style="padding-top:2%;">
+                            <h5>Build <br>Projects</h5>
+                        </div>
+                        <div class="lines21">
+                            Internships,projects and practical teaching methods to <br>
+                            help you become instantly employable and desireable by<br>
+                            the companies.
+                        </div>
+                    </div>
+
+                    <img src="./images/download (2).svg" style="float:right;" height="120px" width="330px" alt="images">
+                </div>
+            </div>
+        </div>
+    </section>
+    <!---------------------------------------------START FROM SCRARTCH CARDS---------------------------->
+
+    <!-------------------------------JUMBOTRON-------------------------------->
+    <section id="middle3_mob">
+        <div class="jumbotron1_mob">
+            <div class="col1_mob">
+
+                <h4 style="font-weight:700;"> Assured internship<br> oppurtunities.</h4>
+                <p> We ensure that you take the first step into the industry
+                    with a reputed firm.From there you're equipped to fly.
+                </p>
+            </div>
+            <div class="col2_mob">
+                <img class="colimg1" src="./images/group-1840-fc9b55ee8da4218792a8e2df574fbbef.svg" alt="image"
+                    height="350px" width="250px">
+            </div>
+
+        </div>
+    </section>
+    <!-----------------------------JUMBOTRON ---------------------------->
+
+
+
+
+
+    <!---------------------------INFINITE CAROUSEL-------------------------------->
+    <section id="middle5">
+        <div class="slider-heading" >
+            <h3>Upskillers have found their way into their dream jobs at</h3>
+            <div class="benefits-section-header-underline"></div>
+            <br><br>
+        </div>
+        <div class="slider">
+            <div class="slide-track">
+                <div class="slide">
+                    <img src="./images/avsoy.webp" height="65px" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./images/bdi.webp" height="65px" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./images/cinema-factory.webp" height="65px" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./images/company.webp" height="65px" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./images/foresiet.webp" height="65" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./images/gordian.webp" height="65" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./images/socio-labs.webp" height="65" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./images/ultracures.webp" height="65" alt="">
+                </div>
+
+                <div class="slide">
+                    <img src="./images/avsoy.webp" height="65px" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./images/bdi.webp" height="65px" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./images/cinema-factory.webp" height="65px" alt="">
+                </div>
+                <div class="slide">
+                    <img src="./images/company.webp" height="65px" alt="">
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!--------------------------------INFINITE CAROUSEL--------------------------------------->
+
+
+
+
+
+    <!------------------MULTI-ITEM CAROUSEL-------------------------->
+    <div class="slider-heading" >
+        <h3>Trending On Upskill</h3>
+        <div class="benefits-section-header-underline"></div>
+        <br><br>
+    </div>
+  
+    <div id="carouselMultiItemExample" class="carousel slide carousel-dark text-center mobile" data-mdb-ride="carousel">
+        
+        <div class="d-flex justify-content-center mb-4">
+            <button class="carousel-control-prev position-relative" type="button"
+                data-mdb-target="#carouselMultiItemExample" data-mdb-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true" style="color:blue"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next position-relative" type="button"
+                data-mdb-target="#carouselMultiItemExample" data-mdb-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true" style="color:blue"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+       
+        <div class="carousel-inner py-4">
+            
+            <div class="carousel-item ">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4">
+                            <div class="card" style="background-color:#444a50;color:white;">
+                                <img class="card-img-top" src="./images/ai.webp" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title fontt">Artificial Intelligence</h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the
+                                        bulk of the
+                                        card's content.</p>
+                                    <a class="btn btn-primary expCourse">EXPLORE COURSE</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 d-none d-lg-block">
+
+                            <div class="card" style="background-color:#444a50;color:white;">
+                                <img class="card-img-top" src="./images/advert.webp" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title fontt">Advertisement And Copywriting</h4>
+                                    <p class="card-text">
+                                        Some quick example text to build on the card title and make up the bulk of the
+                                        card's content.
+                                    </p>
+                                    <a class="btn btn-primary expCourse ">EXPLORE COURSE</a>
+                                </div>
+                            </div>
+
+                        </div>
+
+                        <div class="col-lg-4 d-none d-lg-block">
+
+                            <div class="card" style="background-color:#444a50;color:white;">
+                                <img class="card-img-top" src="./images/android.webp" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title fontt">Android App Development</h4>
+                                    <p class="card-text">Some quick example text to build on the card title and make up
+                                        the
+                                        bulk of the
+                                        card's content.</p>
+                                    <a class="btn btn-primary expCourse">EXPLORE COURSE</a>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+           
+            <div class="carousel-item active">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12">
+                            <div class="card" style="background-color:#444a50;color:white;">
+                                <img class="card-img-top" src="./images/psychology.webp" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title fontt">Psychology</h4>
+                                    <p class="card-text color">Some quick example text to build on the card title and
+                                        make up the
+                                        bulk of the
+                                        card's content.</p>
+                                    <a class="btn btn-primary expCourse">EXPLORE COURSE</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 d-none d-lg-block">
+                            <div class="card" style="background-color:#444a50;color:white;">
+                                <img class="card-img-top" src="./images/aws (1).webp" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title fontt">Big Data Engineering</h4>
+                                    <p class="card-text color">Some quick example text to build on the card title and
+                                        make up
+                                        the bulk of the
+                                        card's content.</p>
+                                    <a class="btn btn-primary expCourse">EXPLORE COURSE</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 d-none d-lg-block">
+                            <div class="card" style="background-color:#444a50;color:white;">
+                                <img class="card-img-top" src="./images/c-program.webp" alt="Card image cap">
+                                <div class="card-body">
+                                    <h4 class="card-title fontt">C And C++</h4>
+                                    <p class="card-text color">Some quick example text to build on the card title and
+                                        make up
+                                        the bulk of the
+                                        card's content.</p>
+                                    <a class="btn btn-primary expCourse">EXPLORE COURSE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+                            <div class="card" style="background-color:#444a50;color:white;">
+                                <img src="./images/planning.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Career Planning for freshers</h5>
+                                    <p class="card-text color">
+                                        Some quick example text to build on the card title and make up the bulk
+                                        of the card's content.
+                                    </p>
+                                    <a href="#!" class="btn btn-primary expCourse">EXPLORE COURSE</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                            <div class="card" style="background-color:#444a50;color:white;">
+                                <img src="./images/hacking.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Ethical Hacking</h5>
+                                    <p class="card-text color">
+                                        Some quick example text to build on the card title and make up the bulk
+                                        of the card's content.
+                                    </p>
+                                    <a href="#!" class="btn btn-primary expCourse">EXPLORE COURSE</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-lg-4 mb-4 mb-lg-0 d-none d-lg-block">
+                            <div class="card" style="background-color:#444a50;color:white;">
+                                <img src="./images/entrepreneur.webp" class="card-img-top" alt="..." />
+                                <div class="card-body">
+                                    <h5 class="card-title">Business Management</h5>
+                                    <p class="card-text color">
+                                        Some quick example text to build on the card title and make up the bulk
+                                        of the card's content.
+                                    </p>
+                                    <a href="#!" class="btn btn-primary expCourse">EXPLORE COURSE</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+        </div>
+      
+    
+       
+    
+
+
+    <div class="app">
+      
+        
+        <ul class="hs full">
+          <li class="item"> 
+            <div class="card" style="background-color:#444a50;color:white;">
+            <img class="card-img-top" src="./images/android.webp" alt="Card image cap">
+            <div class="card-body">
+                <h4 class="card-title fontt">Android App Development</h4>
+                <p class="card-text">Some quick example text to build on the card title and make up
+                    the
+                    bulk of the
+                    card's content.</p>
+                <a class="btn btn-primary">EXPLORE COURSE</a>
+</div>
+        
+        </div></li>
+          <li class="item">
+           
+            <div class="card" style="background-color:#444a50;color:white;">
+              
+                    <img src="./images/entrepreneur.webp" class="card-img-top" alt="..." />
+                    <div class="card-body">
+                        <h5 class="card-title">Business Management</h5>
+                        <p class="card-text color">
+                            Some quick example text to build on the card title and make up the bulk
+                            of the card's content.
+                        </p>
+                        <a href="#!" class="btn btn-primary">EXPLORE COURSE</a>
+                   
+                
+            </div>
+            </div>
+       
+          </li>
+          <li class="item"> 
+            <div class="card" style="background-color:#444a50;color:white;">
+                <img src="./images/hacking.webp" class="card-img-top" alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title">Ethical Hacking</h5>
+                    <p class="card-text color">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                    </p>
+                    <a href="#!" class="btn btn-primary">EXPLORE COURSE</a>
+                
+            </div>
+        </div></li>
+          <li class="item">
+            <div class="card" style="background-color:#444a50;color:white;">
+                <img src="./images/planning.webp" class="card-img-top" alt="..." />
+                <div class="card-body">
+                    <h5 class="card-title">Career Planning for freshers</h5>
+                    <p class="card-text color">
+                        Some quick example text to build on the card title and make up the bulk
+                        of the card's content.
+                    </p>
+                    <a href="#!" class="btn btn-primary">EXPLORE COURSE</a>
+                
+            </div>
+        </div>
+    </li>
+          <li class="item">  
+               <div class="card" style="background-color:#444a50;color:white;">
+                <img class="card-img-top" src="./images/c-program.webp" alt="Card image cap">
+                <div class="card-body">
+                    <h4 class="card-title fontt">C And C++</h4>
+                    <p class="card-text color">Some quick example text to build on the card title and
+                        make up
+                        the bulk of the
+                        card's content.</p>
+                    <a class="btn btn-primary">EXPLORE COURSE</a>
+                </div>
+            </div>
+        </li>
+         
+        </ul>
+        
+      
+      </div>
+
+ <!------------------MULTI-ITEM CAROUSEL-------------------------->
+
+
+
+
+    <!---------------------------------STAT SECTION--------------------------------->
+
+
+    <section id="stat-section" style="margin-top:8%">
+        <div class="stat-container">
+            <div class="stat1">
+
+                <div class="img">
+                    <img class="image-section" src="./images/minutes.svg" alt="minutes" style="float:left;">
+                </div>
+
+                <div class="stat2-card">
+                    <h2>
+                        5,00,000</h2>
+                    <h6 style="color:#ffbc00;">&nbsp;&nbsp;learning minutes</h6>
+                </div>
+
+                <div class="stat-para yellow" style="padding-top:5%;">
+                    <p>5,00,000 Learning Minutes in 2020</p>
+                </div>
+
+            </div>
+
+            <div class="stat2">
+                <div class="img">
+                    <img class="image-section" src="./images/users.svg" alt="users" style="float:left;">
+                </div>
+
+                <div class="stat2-card" style="border-bottom:1px solid #00e6ff">
+                    <h2>
+                        21,000</h2>
+                    <h6 style="color:#00e6ff;">&nbsp;&nbsp;Active users</h6>
+                </div>
+
+                <div class="stat-para blue" style="padding-top:5%;">
+                    <p>A community of 21,000 active users every month</p>
+                </div>
+            </div>
+
+            <div class="stat3">
+                <div class="img" style="margin-top:-15%;">
+                    <img class="image-section" src="./images/learners.svg" alt="learners" style="float:left;">
+                </div>
+
+                <div class="stat2-card" style="border-bottom:1px solid  #ff8a00 ">
+                    <h2>
+                        10,000</h2>
+                    <h6 style="color:#ff8a00;">&nbsp;&nbsp;learners</h6>
+                </div>
+
+                <div class="stat-para orange" style="padding-top:5%;">
+                    <p>10,000 learners coached and placed</p>
+                </div>
+
+
+            </div>
+
+        </div>
+
+    </section>
+
+    <!-----------------------------STAT SECTION------------------------------------------------------>
+
+
+
+
+
+
+    <!------------------------------FAQ ACCORDION CARD---------------------------------------------------->
+    <section id="questions-outer-container">
+        <div class="head1">
+            <h5 style="color:white;">Frequently Asked Questions</h5>
+            <div class="benefits-section-header-underline"></div>
+            <br>
+        </div>
+        <div class="body2">
+            <div class="body11">
+                <div class="accordion">&nbsp;&nbsp;Is there a demo lecture available?</div>
+                <div class="panel">
+                    <p>Yes. Once you sign up with us, you will able to access and view few demo lessons in every course.
+                    </p>
+                </div>
+            </div>
+
+            <div class="body11">
+                <div class="accordion">&nbsp;&nbsp;How do I contact my Coach?</div>
+                <div class="panel">
+                    <p>You may contact your coach through multiple means. The easiest
+                        way is through the Discussion Board on your profile. Junior
+                        Coaches and Mentors on the platform contact you on a regular
+                        basis to help you with project completion and the learning
+                        process. Also, you can get in touch with the Coach through Email,
+                        WhatsApp and calls subject to availability of the Coach.</p>
+                </div>
+            </div>
+
+            <div class="body11">
+                <div class="accordion">&nbsp;&nbsp;How long is the course duration?</div>
+                <div class="panel">
+                    <p>Courses at Unschool are self-paced. Take 2 weeks or 3
+                        months – at Unschool, you are allowed to learn at your
+                        own pace and every course is designed to cater to your
+                        personal needs, which means you pay once and learn
+                        life-long.</p>
+                </div>
+            </div>
+
+
+            <div class="body11">
+                <div class="accordion">&nbsp;&nbsp;What are the modes of payment available?</div>
+                <div class="panel">
+                    <p>Unschool caters to the Indian youth and hence the
+                        choices we provide in the payment methods are diverse.
+                        You may choose to pay directly on the website through
+                        Debit/Credit cards and Internet banking, and you will
+                        receive immediate access to the course. In addition,
+                        we also provide E-wallet options and direct UPI transfers.
+                        If you are a student who doesn’t use any of these electronic
+                        modes, you may choose to pay by cash to one of our Unschool
+                        Community Representatives or even directly deposit money
+                        in the bank.
+                        <br>
+                        Write to us at<a href="#"> support@upskill.in </a>for more information.
+                    </p>
+                </div>
+            </div>
+
+            <div class="body11">
+                <div class="accordion">&nbsp;&nbsp;Why should I learn on Upskill?</div>
+                <div class="panel">
+                    <p>Unschool is a melting pot of counter solutions to all the problems
+                        that exist in the education system. Unschool provides you with
+                        One-to-One Mentorship, Practical assessments, Certified Projects
+                        and Guaranteed Internship opportunities – all of this designed
+                        and validated by industry experts. Learning never ceases at Unschool.
+                        You have life-long access to your course and you will always receive
+                        updates on the Unschool Community that you can be a part of.</p>
+                </div>
+            </div>
+
+            <div class="body11">
+                <div class="accordion">&nbsp;&nbsp;Who are these industry experts who teach the course exactly?
+                </div>
+
+                <div class="panel">
+                    <p>Our coaches come with experience and are working with renowned
+                        institutions. Most of our coaches are young achievers. Some
+                        companies they represent are Inc42, Nearbuy, AIESEC, Leo
+                        Burnett etc.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-------------------------------------------------------FAQ ACCORDION CARD--------------------------------------------->
+
+
+
+
+
+    <!--------------------------------------------------------JUMBOTRON 2------------------------------------------------->
+    <section id="middle4">
+        <div class="jumbotron2">
+
+            <div class="form-group jumbo1">
+                <form>
+                    <label for="exampleInputEmail1">
+                        Sign up for our free news letter and get more of
+                        upskill delivered to your inbox.
+                    </label>
+                    <br>
+                    <div class="inputemail1">
+
+                        <table cellpadding="5" cellspacing="5">
+                            <tr>
+                                <td><input type="email" class="form-control emailbox" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="Enter your Email-Id here."></td>
+                                <br>
+                                <td><button type="submit" class="btn btn-outline-danger btn-md">Subscribe</button></td>
+                            </tr>
+                        </table>
+                    </div>
+
+                    <div class="inputemail2">
+                        <table cellpadding="5px">
+                            <tr>
+                                <td>
+                                    <input type="email" class="form-control emailbox" id="exampleInputEmail1"
+                                        aria-describedby="emailHelp" placeholder="Enter your Email-Id here.">
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <button type="submit" class="btn btn-outline-danger btn-md">SUBSCRIBE</button>
+                                </td>
+                            </tr>
+                        </table>
+                    </div>
+                </form>
+
+
+            </div>
+
+            <div class="jumbo2">
+                <img class="jumbo2-image" src="./images/a.svg" alt="inbox image">
+            </div>
+        </div>
+    </section>
+    <!-------------------------------------------------JUMBOTRON 2----------------------------->
+
+
+
+    <!---------------------------------------------------FOOTER SECTION------------------------------------>
+    <section id="bottom">
+        <div class="footer">
+            <div class="social-mob">
+                <h5>Social</h5>
+            </div>
+            <div class="col-f111-mob">
+                <a href="mailto:yogita20.20sharma@gmail.com">
+                    <img src="./images/mail.svg" width="45px" alt="mail"></a>&nbsp;&nbsp;
+                <a href="#">
+                    <img src="./images/insta.svg" width="45px" alt="instagram"></a>&nbsp;&nbsp;
+                <a href="#">
+                    <img src="./images/twitter.svg" width="45px" alt="twitter"></a>&nbsp;&nbsp;
+                <a href="#">
+                    <img src="./images/linkedn.svg" width="45px" alt="facebook"></a>&nbsp;&nbsp;
+                <a href="#">
+                    <img src="./images/facebook.svg" width="45px" alt="facebook"></a>&nbsp;&nbsp;
+            </div>
+
+            <div class="col-f1">
+                <div class="unschool">
+                    <h5>Unschool</h5>
+                </div>
+                <div class="col-f11">
+                    <a href="#">About Us</a>
+                </div>
+                <div class="col-f11">
+                    <a href="#">Contact Us</a>
+                </div>
+                <div class="col-f11">
+                    <a href="#">Community Program</a>
+                </div>
+                <div class="col-f11">
+                    <a href="#">Join Us</a>
+                </div>
+                <div class="col-f11">
+                    <a href="#">Partner with Us</a>
+                </div>
+                <div class="col-f11">
+                    <a href="#">Sign-in</a>
+                </div>
+
+                <div class="policies">
+                    <h5>Policies</h5>
+                </div>
+                <div class="col-f11">
+                    <a href="#">Disclaimer</a>
+                </div>
+                <div class="col-f11">
+                    <a href="#">Terms of services</a>
+                </div>
+                <div class="col-f11">
+                    <a href="#">Refund and Cancellation</a>
+                </div>
+                <div class="col-f11">
+                    <a href="#">Privacy Policy</a>
+                </div>
+                <div class="col-f11">
+                    <a href="#">Payment Terms</a>
+                </div>
+            </div>
+            <div class="col-f2">
+                <div class="browse">
+                    <h5>Browse Courses</h5>
+                </div>
+                <div class="col-f11">
+                    <a href="#">Art & Media</a>
+                </div>
+                <div class="col-f11">
+                    <a href="#">Technology</a>
+                </div>
+                <div class="col-f11">
+                    <a href="#">Design & Innovation</a>
+                </div>
+                <div class="col-f11">
+                    <a href="#">Entepreneur Skills</a>
+                </div>
+
+            </div>
+            <div class="col-f3">
+                <div class="coach">
+                    <h5>Become a Coach</h5>
+                </div>
+                <div class="col-f11">
+                    <a href="#">About Coaching</a>
+                </div>
+                <div class="col-f11">
+                    <a href="#">Register as a coach</a>
+                </div>
+                <br>
+                <div class="social">
+                    <h5>Social</h5>
+                </div>
+                <div class="col-f111">
+                    <a href="mailto:yogita20.20sharma@gmail.com">
+                        <img src="./images/mail.svg" width="45px" alt="mail"></a>&nbsp;&nbsp;
+                    <a href="#">
+                        <img src="./images/insta.svg" width="45px" alt="instagram"></a>&nbsp;&nbsp;
+                    <a href="#">
+                        <img src="./images/twitter.svg" width="45px" alt="twitter"></a>&nbsp;&nbsp;
+                    <a href="#">
+                        <img src="./images/linkedn.svg" width="45px" alt="facebook"></a>&nbsp;&nbsp;
+                    <a href="#">
+                        <img src="./images/facebook.svg" width="45px" alt="facebook"></a>&nbsp;&nbsp;
+                </div>
+
+            </div>
+
+
+            <div class="col-f4">
+
+                <div>
+                    <iframe width="300" height="200" id="gmap_canvas"
+                        src="https://maps.google.com/maps?q=%2315410%2CMata%20jivi%20nagar%20near%20rose%20garden%2CBathinda%2CPunjab&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                        frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+                </div>
+
+
+                We’re housed at Ground Floor,
+                H.No.<br> 1-11-251/3,behind ShoppersStop,<br>
+                Begumpet, Hyderabad, Telangana 500016
+
+
+
+            </div>
+
+
+        </div>
+        <hr style="color:white;">
+
+
+
+
+    </section>
+    <!--------------------------------------------FOOTER SECTION----------------------------->
+
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        var i;
+
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function () {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.maxHeight) {
+                    panel.style.maxHeight = null;
+                } else {
+                    panel.style.maxHeight = panel.scrollHeight + "px";
+                }
+            });
+        }
+
+
+        count = 0;
+        var button = document.getElementById("clickme");
+
+        button.onclick = function () {
+            count += 1;
+
+
+            console.log(count);
+            if (count == 1) {
+                var sent = document.getElementById('text-field').value;
+                if (sent == "") {
+                    alert("please enter your name in the chatbox");
+                    count = count - 1;
+                }
+                else {
+
+                    document.getElementById("answer1").style.display = "block";
+                    document.getElementById("answer1").innerHTML = sent;
+                    document.getElementById('text-field').value = "";
+                    setTimeout(function () {
+                        document.getElementById("quest2").style.display = "block";
+                    }, 2000);
+                }
+            }
+
+
+            if (count == 2) {
+
+                var sent1 = document.getElementById('text-field').value;
+                if (sent1 == "") {
+                    alert("please enter your PhoneNumber in the chatbox");
+                    count = count - 1;
+                }
+                else {
+
+                    document.getElementById("answer2").style.display = "block";
+                    document.getElementById("answer2").innerHTML = sent1;
+                    document.getElementById('text-field').value = "";
+                    document.getElementById('text-field').disabled = true;
+                    setTimeout(function () {
+                        document.getElementById("quest3_comp").style.display = "block";
+                    }, 2000);
+                }
+            }
+        };
+        function choice_tech() {
+
+            var text = document.getElementById("technology").innerHTML;
+            document.getElementById("answer3").innerHTML = text;
+            document.getElementById("answer3").style.display = "block";
+            setTimeout(function () {
+                document.getElementById("last_quest").style.display = "block";
+            }, 2000);
+        }
+        function choice_arts() {
+
+            var text = document.getElementById("arts").innerHTML;
+            document.getElementById("answer3").innerHTML = text;
+            document.getElementById("answer3").style.display = "block";
+            setTimeout(function () {
+                document.getElementById("last_quest").style.display = "block";
+            }, 2000);
+        }
+        function choice_management() {
+
+            var text = document.getElementById("management").innerHTML;
+            document.getElementById("answer3").innerHTML = text;
+            document.getElementById("answer3").style.display = "block";
+            setTimeout(function () {
+                document.getElementById("last_quest").style.display = "block";
+            }, 2000);
+
+        }
+        function choice_aboutus() {
+
+            var text = document.getElementById("aboutus").innerHTML;
+            document.getElementById("answer3").innerHTML = text;
+            document.getElementById("answer3").style.display = "block";
+            setTimeout(function () {
+                document.getElementById("last_quest").style.display = "block";
+            }, 2000);
+
+
+        }
+
+      
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+   
+
+</body>
+
+</html>
